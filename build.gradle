@@ -30,8 +30,12 @@ dependencies {
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.6.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.7.17'
+    implementation group: 'org.springframework.data', name: 'spring-data-redis'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis'
+    implementation group: 'redis.clients', name: 'jedis', version: '5.0.2'
 
 }
 

@@ -19,10 +19,11 @@ public class UserDetailHandler implements RequestHandler<UserDetailQuery, UserDT
 
     @Override
     public UserDTO handle(UserDetailQuery request) {
-        return UserUtil.getUsers()
-                       .stream()
-                       .filter(x -> request.getUsername().equals(x.getName())).findFirst()
-                       .map(value -> new UserDTO(value.getName(), value.getRole().getCode()))
-                       .orElse(null);
+//        return UserUtil.getUsers()
+//                       .stream()
+//                       .filter(x -> request.getUsername().equals(x.getName())).findFirst()
+//                       .map(value -> new UserDTO(value.getName(), value.getRole().getCode()))
+//                       .orElse(null);
+        return null;
     }
 }

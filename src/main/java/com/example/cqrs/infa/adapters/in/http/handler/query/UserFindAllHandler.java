@@ -22,8 +22,9 @@ public class UserFindAllHandler implements RequestHandler<UserFindAllQuery, List
 
     @Override
     public List<UserDTO> handle(UserFindAllQuery request) {
-        return UserUtil.getUsers().stream()
-                       .map(value -> new UserDTO(value.getName(), value.getRole().getCode()))
-                       .collect(Collectors.toList());
+//        return UserUtil.getUsers().stream()
+//                       .map(value -> new UserDTO(value.getName(), value.getRole().getCode()))
+//                       .collect(Collectors.toList());
+        return null;
     }
 }

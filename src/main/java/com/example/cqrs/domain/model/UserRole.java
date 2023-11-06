@@ -11,11 +11,18 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "tbl_user")
-public class User implements Serializable {
+@Embeddable
+@Table(name = "tbl_user_role")
+public class UserRole implements Serializable {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "user_id", nullable = false)
     private Integer id;
-    private String name;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private Role role;
 }
